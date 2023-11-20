@@ -18,7 +18,7 @@ namespace MindBoxTest
         /// </summary>
         /// <param name="triangleData"></param>
         /// <returns></returns>
-        public double GetArea(TriangleData triangleData)
+        private double GetArea(TriangleData triangleData)
         {
             if(triangleData is null)
             {
@@ -48,6 +48,38 @@ namespace MindBoxTest
         public Triangle(IFigureData data)
         {
             _data = data;
+        }
+
+        public bool IsRightTriangle()
+        {
+            //В зависимости от метода задания круга, используется соответствующая перегрузка
+            if (_data is TriangleData) return IsRightTriangle(_data as TriangleData);
+
+            return false;
+
+
+        }
+
+        /// <summary>
+        /// Проверяет, прямоугольный ли треугольник по данным по трём сторонам
+        /// </summary>
+        /// <param name="triangleData"></param>
+        /// <returns></returns>
+        private bool IsRightTriangle(TriangleData triangleData)
+        {
+            double side1 = triangleData.GetFirstSide();
+            double side2 = triangleData.GetSecondSide();
+            double side3 = triangleData.GetThirdSide();
+
+            double maxSide = Math.Max(side1, Math.Max(side2, side3));
+
+            side1 = maxSide == side1 ? 0d : side1;
+            side2 = maxSide == side2 ? 0d : side2;
+            side3 = maxSide == side3 ? 0d : side3;
+
+            return maxSide * maxSide == side1 * side1 + side2 * side2 + side3 * side3;
+
+
         }
     }
 }

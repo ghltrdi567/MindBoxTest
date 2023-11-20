@@ -1,8 +1,7 @@
 ﻿using MindBoxTest;
 
 double circle_rad = 10d;
-
-double[] triange_sides = new double[] { 1d, 2d, 3d };
+double[] triange_sides = new double[] { 13d, 12d, 5d };
 
 //Создаётся круг радиуса 56 (метров)
 
@@ -19,6 +18,6 @@ Console.WriteLine("Площадь круга, радиуса {0} равна {1}"
 Console.WriteLine("Площадь треугольника , со сторонами {0}, {1} и {2} равна {3}", triange_sides[0], triange_sides[1], triange_sides[2], triangleArea);
 
 
-
+Console.WriteLine("Треугольник, со сторонами {0}, {1} и {2} {3}является прямоугольным", triange_sides[0], triange_sides[1], triange_sides[2], triangle.IsRightTriangle()? "":"не ");
 
 
