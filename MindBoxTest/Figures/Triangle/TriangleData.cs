@@ -9,7 +9,7 @@ namespace MindBoxTest
     /// <summary>
     /// Исходные данные для создания треуголька (по трём сторонам)
     /// </summary>
-    internal class TriangleData : IFigureData
+    public class TriangleData : IFigureData
     {
         /// <summary>
         /// Стороны (в метрах)

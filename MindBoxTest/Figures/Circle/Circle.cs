@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MindBoxTest
 {
-    internal class Circle : IFigure
+    public  class Circle : IFigure
     {
         /// <summary>
         /// Исходные данные для однозначного задания фигуры

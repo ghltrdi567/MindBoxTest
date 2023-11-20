@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MindBoxTest
 {
-    internal class Triangle : IFigure
+    public  class Triangle : IFigure
     {
         /// <summary>
         /// Исходные данные для однозначного задания фигуры
@@ -35,6 +35,7 @@ namespace MindBoxTest
 
         public double GetArea()
         {
+            //В зависимости от метода задания круга, используется соответствующая перегрузка
             if (_data is TriangleData) return GetArea(_data as TriangleData);
 
             return 0;

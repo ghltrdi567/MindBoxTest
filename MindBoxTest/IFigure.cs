@@ -9,7 +9,7 @@ namespace MindBoxTest
     /// <summary>
     /// Интерфейс фигуры, предоставляющий возсожность вычислять его площадь
     /// </summary>
-    internal interface IFigure
+    public interface IFigure
     {
 
 
@@ -17,7 +17,8 @@ namespace MindBoxTest
         /// Метод, возвращающий площадь фигуры на плоскости
         /// </summary>
         /// <returns>Площадь, мв.м</returns>
-        public double GetArea();
+        public abstract double GetArea();
+
 
 
     }

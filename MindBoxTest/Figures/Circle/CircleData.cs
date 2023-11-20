@@ -9,7 +9,7 @@ namespace MindBoxTest
     /// <summary>
     /// Исходные данные для создания треуголька (по трём сторонам)
     /// </summary>
-    internal class CircleData : IFigureData
+    public  class CircleData : IFigureData
     {
         private double _radius;
 

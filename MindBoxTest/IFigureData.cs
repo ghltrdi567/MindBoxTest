@@ -9,7 +9,7 @@ namespace MindBoxTest
     /// <summary>
     /// Исходные данные, необходимые для создания фигуры
     /// </summary>
-    internal interface IFigureData
+    public interface IFigureData
     {
 
 
