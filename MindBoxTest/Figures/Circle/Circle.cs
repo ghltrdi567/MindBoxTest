@@ -18,7 +18,7 @@ namespace MindBoxTest
         /// </summary>
         /// <param name="triangleData"></param>
         /// <returns></returns>
-        public double GetArea(CircleData circleData)
+        private double GetArea(CircleData circleData)
         {
             if(circleData is null)
             {

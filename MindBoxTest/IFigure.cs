@@ -16,7 +16,7 @@ namespace MindBoxTest
         /// <summary>
         /// Метод, возвращающий площадь фигуры на плоскости
         /// </summary>
-        /// <returns>Площадь, мв.м</returns>
+        /// <returns>Площадь, кв.м</returns>
         public abstract double GetArea();
 
 

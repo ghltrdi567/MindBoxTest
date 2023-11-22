@@ -26,7 +26,7 @@ namespace MindBoxTest
                 return 0;
             }
 
-            double half_perimeter = triangleData.GetPerimetr();
+            double half_perimeter = triangleData.GetPerimetr()/2;
 
             return Math.Sqrt(half_perimeter * (half_perimeter - triangleData.GetFirstSide()) *
                 (half_perimeter - triangleData.GetSecondSide()) * (half_perimeter - triangleData.GetThirdSide()));
@@ -72,6 +72,8 @@ namespace MindBoxTest
             double side3 = triangleData.GetThirdSide();
 
             double maxSide = Math.Max(side1, Math.Max(side2, side3));
+
+            if (maxSide == 0d) return false;
 
             side1 = maxSide == side1 ? 0d : side1;
             side2 = maxSide == side2 ? 0d : side2;

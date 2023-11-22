@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,10 +46,31 @@ namespace MindBoxTest
 
             if (k < 3)
             { 
-                Console.WriteLine("Не удалось получить необходимое количество длин сторон! Возвращён единичный равносторонний треугольник");
+                Console.WriteLine("Не удалось получить необходимое количество длин сторон! Возвращён нулевой равносторонний треугольник");
+                Sides = new double[] {0d, 0d, 0d};
+                return;
+            };
 
-            Sides = new double[] {1d, 1d, 1d};
-            }; 
+
+            //Каждая сторона (большая) не может быть больше суммы двух других
+            var max_side = GetMaxSide();
+
+            double sum = 0d;
+            for(int i = 0;i <3;i++) {
+
+                sum += Sides[i] == max_side ? 0 : Sides[i];
+            
+            }
+
+            if(max_side > sum)
+            {
+                Console.WriteLine("Каждая сторона (большая) не может быть больше суммы двух других!" +
+                    " Возвращён нулевой равносторонний треугольник");
+                Sides = new double[] { 0d, 0d, 0d };
+                return;
+
+
+            }
 
         }
 
@@ -91,6 +113,19 @@ namespace MindBoxTest
         public double GetThirdSide()
         {
             return Sides[2];
+
+        }
+
+        /// <summary>
+        /// Возвращает длину большей стороны 
+        /// </summary>
+        /// <returns></returns>
+        public double GetMaxSide()
+        {
+
+           return  Math.Max(Sides[0], Math.Max(Sides[1], Sides[2]));
+
+
 
         }
     }
