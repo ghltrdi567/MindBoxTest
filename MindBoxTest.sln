@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindBoxTest", "MindBoxTest\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindBoxRunTest", "MindBoxRunTest\MindBoxRunTest.csproj", "{BF79BAC8-F315-4446-A7F0-FE47A279FF8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindDoxTest.Tests", "MindDoxTest.Tests\MindDoxTest.Tests.csproj", "{51326C8B-37DF-4FEF-A487-3CB629E58152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindDoxTest.Tests", "MindDoxTest.Tests\MindDoxTest.Tests.csproj", "{51326C8B-37DF-4FEF-A487-3CB629E58152}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{A3816F9D-645F-4E6E-9D2C-16C6A211BC7F}"
+	ProjectSection(SolutionItems) = preProject
+		SQL.txt = SQL.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
