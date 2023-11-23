@@ -9,5 +9,10 @@
 
 В таком случае запрос будет выглядеть так:
 
-SELECT Products.Name, Categories.Name
-FROM Products FULL JOIN CategoriesContent ON 
+SELECT [Products].[Name]
+      ,[Categories].[Name]
+  FROM [Products]
+  LEFT JOIN [CategoryContent]
+  ON [CategoryContent].[ProductID] = [Products].[id]
+  FULL JOIN [Categories]
+  ON [Categories].[id] = [CategoryContent].[CategoryID]
